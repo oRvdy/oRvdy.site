@@ -1,0 +1,144 @@
+/* Fundo estrelado com imagem GIF */
+body {
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #000;
+}
+
+.background-gif {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -12;
+    background-image: url('../img/fundo.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Overlay para esconder o nome na imagem */
+.overlay {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background: linear-gradient(to top, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 100%);
+    z-index: -11;
+}
+
+.stars-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    overflow: hidden;
+    opacity: 0.6;
+}
+
+.stars, .stars2, .stars3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-image: 
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300' viewBox='0 0 300 300'%3E%3Ccircle fill='%23FFF' cx='150' cy='150' r='0.5'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 300px 300px;
+}
+
+.stars {
+    animation: stars-animation 500s linear infinite;
+    opacity: 0.5;
+}
+
+.stars2 {
+    background-image: 
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Ccircle fill='%23FFF' cx='100' cy='100' r='0.8'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    animation: stars-animation 300s linear infinite;
+    opacity: 0.3;
+}
+
+.stars3 {
+    background-image: 
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Ccircle fill='%23FFF' cx='200' cy='200' r='1'/%3E%3C/svg%3E");
+    background-size: 400px 400px;
+    animation: stars-animation 450s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes stars-animation {
+    0% {
+        transform: rotate(0deg) translateY(0);
+    }
+    100% {
+        transform: rotate(360deg) translateY(-2000px);
+    }
+}
+
+/* Scanline effect */
+.scanlines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    background: linear-gradient(
+        to bottom,
+        transparent 50%,
+        rgba(0, 0, 0, 0.02) 51%
+    );
+    background-size: 100% 4px;
+    pointer-events: none;
+}
+
+/* Vignette effect */
+.vignette {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -6;
+    background: radial-gradient(
+        circle,
+        transparent 20%,
+        rgba(0, 0, 0, 0.3) 70%,
+        rgba(0, 0, 0, 0.8) 100%
+    );
+    pointer-events: none;
+}
+
+/* Small floating particles */
+.particles-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -7;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+}
+
+/* Custom cursor */
+body {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><circle cx="8" cy="8" r="5" fill="%23ffffff" opacity="0.8"/></svg>') 8 8, auto;
+}

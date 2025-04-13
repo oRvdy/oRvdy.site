@@ -1,0 +1,35 @@
+# Arquivo de configuração da Discloud
+discloud.config
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Diretórios de dependências
+node_modules/
+jspm_packages/
+
+# Diretórios de build/cache
+.npm
+.eslintcache
+.cache
+dist/
+build/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDEs e editores
+.idea/
+.vscode/
+*.swp
+*.swo
