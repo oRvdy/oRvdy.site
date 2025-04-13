@@ -6,7 +6,7 @@
 
 ## 🔗 [Acesse o site](https://orvdy.site)
 
-![Preview do Site](https://i.imgur.com/j0TL76i.png)
+![Preview do Site](https://i.imgur.com/WXFGFD1.png)
 
 ## 📝 Descrição
 
